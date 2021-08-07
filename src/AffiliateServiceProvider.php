@@ -21,6 +21,7 @@ class AffiliateServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasRoute('web')
             ->hasTranslations()
+            ->hasMigrations('affiliate')
             ->hasCommand(InitiatePayouts::class);
 
         $this->app->make(Kernel::class)
